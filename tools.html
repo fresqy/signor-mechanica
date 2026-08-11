@@ -1,0 +1,1542 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tools · Signor Mechanica</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <a href="index.html" class="brand">
+            SIGNOR MECHANICA
+        </a>
+
+        <nav class="navigation">
+            <a href="tools.html">TOOLS</a>
+            <a href="scientia.html">SCIENTIA</a>
+            <a href="notizie.html">NOTIZIE</a>
+            <a href="diario.html">DIARIO</a>
+            <a href="video.html">VIDEO</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PAGE TITLE
+        ========================== -->
+
+        <section class="category-title">
+
+            <span>01</span>
+
+            <h2>TOOLS</h2>
+
+            <p>
+                Mühendislik problemleri için
+                pratik hesaplama araçları.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ENGINEERING MAP
+        ========================== -->
+
+        <section class="engineering-map">
+
+            <div class="engineering-map-header">
+
+                <span>INDEX</span>
+
+                <h2>ENGINEERING MAP</h2>
+
+            </div>
+
+
+            <div class="map-container">
+
+                <div class="map-axis"></div>
+
+
+                <!-- CONNECTIONS -->
+
+                <div
+                    class="map-connection vertical"
+                    style="left: 50%;">
+                </div>
+
+                <div
+                    class="map-connection horizontal"
+                    style="top: 50%;">
+                </div>
+
+
+                <!-- CENTER -->
+
+                <div class="map-center">
+                    ENGINEERING
+                </div>
+
+
+                <!-- MECHANICS -->
+
+                <a
+                    href="#mechanics"
+                    class="map-node mechanics">
+
+                    <span>01</span>
+
+                    <h3>MECHANICS</h3>
+
+                    <p>
+                        Force, stress, torque,
+                        power and motion.
+                    </p>
+
+                </a>
+
+
+                <!-- MATERIALS -->
+
+                <a
+                    href="#materials"
+                    class="map-node materials">
+
+                    <span>02</span>
+
+                    <h3>MATERIALS</h3>
+
+                    <p>
+                        Density, expansion,
+                        elasticity and properties.
+                    </p>
+
+                </a>
+
+
+                <!-- THERMODYNAMICS -->
+
+                <a
+                    href="#thermodynamics"
+                    class="map-node thermo">
+
+                    <span>03</span>
+
+                    <h3>THERMODYNAMICS</h3>
+
+                    <p>
+                        Gases, efficiency
+                        and thermal systems.
+                    </p>
+
+                </a>
+
+
+                <!-- FLUIDS -->
+
+                <a
+                    href="#fluids"
+                    class="map-node fluids">
+
+                    <span>04</span>
+
+                    <h3>FLUIDS</h3>
+
+                    <p>
+                        Pressure, flow,
+                        velocity and Reynolds.
+                    </p>
+
+                </a>
+
+
+                <!-- ENERGY -->
+
+                <a
+                    href="#energy"
+                    class="map-node energy">
+
+                    <span>05</span>
+
+                    <h3>ENERGY</h3>
+
+                    <p>
+                        Work, kinetic,
+                        potential and mechanical energy.
+                    </p>
+
+                </a>
+
+
+                <!-- HEAT TRANSFER -->
+
+                <a
+                    href="#heat-transfer"
+                    class="map-node heat">
+
+                    <span>06</span>
+
+                    <h3>HEAT TRANSFER</h3>
+
+                    <p>
+                        Conduction, heat flow
+                        and thermal calculations.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MECHANICS
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="mechanics">
+
+            <div class="category-title">
+
+                <span>01</span>
+
+                <h2>MECHANICS</h2>
+
+                <p>
+                    Force, motion, stress, torque,
+                    power and mechanical efficiency.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- STRESS -->
+
+                <article class="tool-card">
+
+                    <span>01 · MECHANICS</span>
+
+                    <h2>STRESS</h2>
+
+                    <p>
+                        Calculate normal stress from
+                        applied force and cross-sectional area.
+                    </p>
+
+                    <div class="formula">
+                        σ = F / A
+                    </div>
+
+                    <label for="force">
+                        FORCE (N)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="force"
+                        placeholder="1000"
+                        min="0">
+
+                    <label for="area">
+                        AREA (mm²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="area"
+                        placeholder="100"
+                        min="0">
+
+                    <button onclick="calculateStress()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="stressResult">
+                    </div>
+
+                </article>
+
+
+                <!-- EFFICIENCY -->
+
+                <article class="tool-card">
+
+                    <span>02 · MECHANICS</span>
+
+                    <h2>EFFICIENCY</h2>
+
+                    <p>
+                        Calculate mechanical efficiency
+                        from useful output and input energy.
+                    </p>
+
+                    <div class="formula">
+                        η = Eᵤ / Eᵢ
+                    </div>
+
+                    <label for="useful">
+                        USEFUL OUTPUT
+                    </label>
+
+                    <input
+                        type="number"
+                        id="useful"
+                        placeholder="800"
+                        min="0">
+
+                    <label for="input">
+                        INPUT
+                    </label>
+
+                    <input
+                        type="number"
+                        id="input"
+                        placeholder="1000"
+                        min="0">
+
+                    <button onclick="calculateEfficiency()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="efficiencyResult">
+                    </div>
+
+                </article>
+
+
+                <!-- TORQUE -->
+
+                <article class="tool-card">
+
+                    <span>03 · MECHANICS</span>
+
+                    <h2>TORQUE</h2>
+
+                    <p>
+                        Calculate torque from applied
+                        force and perpendicular distance.
+                    </p>
+
+                    <div class="formula">
+                        τ = F × r
+                    </div>
+
+                    <label for="torqueForce">
+                        FORCE (N)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="torqueForce"
+                        placeholder="100"
+                        min="0">
+
+                    <label for="distance">
+                        DISTANCE (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="distance"
+                        placeholder="0.5"
+                        min="0">
+
+                    <button onclick="calculateTorque()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="torqueResult">
+                    </div>
+
+                </article>
+
+
+                <!-- POWER -->
+
+                <article class="tool-card">
+
+                    <span>04 · MECHANICS</span>
+
+                    <h2>POWER</h2>
+
+                    <p>
+                        Calculate mechanical power from
+                        torque and rotational speed.
+                    </p>
+
+                    <div class="formula">
+                        P = T × ω
+                    </div>
+
+                    <label for="powerTorque">
+                        TORQUE (N·m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="powerTorque"
+                        placeholder="50"
+                        min="0">
+
+                    <label for="rpm">
+                        SPEED (RPM)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rpm"
+                        placeholder="1500"
+                        min="0">
+
+                    <button onclick="calculatePower()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="powerResult">
+                    </div>
+
+                </article>
+
+
+                <!-- STRAIN -->
+
+                <article class="tool-card">
+
+                    <span>05 · MECHANICS</span>
+
+                    <h2>STRAIN</h2>
+
+                    <p>
+                        Calculate engineering strain from
+                        original and final length.
+                    </p>
+
+                    <div class="formula">
+                        ε = ΔL / L₀
+                    </div>
+
+                    <label for="lengthChange">
+                        LENGTH CHANGE (mm)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="lengthChange"
+                        placeholder="2"
+                        min="0">
+
+                    <label for="originalLength">
+                        ORIGINAL LENGTH (mm)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="originalLength"
+                        placeholder="100"
+                        min="0">
+
+                    <button onclick="calculateStrain()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="strainResult">
+                    </div>
+
+                </article>
+
+
+                <!-- FORCE -->
+
+                <article class="tool-card">
+
+                    <span>06 · MECHANICS</span>
+
+                    <h2>FORCE</h2>
+
+                    <p>
+                        Calculate force from mass and
+                        gravitational acceleration.
+                    </p>
+
+                    <div class="formula">
+                        F = m × g
+                    </div>
+
+                    <label for="mass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="mass"
+                        placeholder="10"
+                        min="0">
+
+                    <label for="gravity">
+                        GRAVITY (m/s²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="gravity"
+                        placeholder="9.81"
+                        min="0">
+
+                    <button onclick="calculateForce()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="forceResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             ENERGY
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="energy">
+
+            <div class="category-title">
+
+                <span>02</span>
+
+                <h2>ENERGY</h2>
+
+                <p>
+                    Work, kinetic, potential and
+                    mechanical energy.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- KINETIC -->
+
+                <article class="tool-card">
+
+                    <span>01 · ENERGY</span>
+
+                    <h2>KINETIC</h2>
+
+                    <p>
+                        Calculate kinetic energy from
+                        mass and velocity.
+                    </p>
+
+                    <div class="formula">
+                        Eₖ = ½mv²
+                    </div>
+
+                    <label for="kineticMass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="kineticMass"
+                        placeholder="10"
+                        min="0">
+
+                    <label for="velocity">
+                        VELOCITY (m/s)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="velocity"
+                        placeholder="20"
+                        min="0">
+
+                    <button onclick="calculateKineticEnergy()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="kineticResult">
+                    </div>
+
+                </article>
+
+
+                <!-- POTENTIAL -->
+
+                <article class="tool-card">
+
+                    <span>02 · ENERGY</span>
+
+                    <h2>POTENTIAL</h2>
+
+                    <p>
+                        Calculate gravitational potential
+                        energy from mass and height.
+                    </p>
+
+                    <div class="formula">
+                        Eₚ = mgh
+                    </div>
+
+                    <label for="potentialMass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="potentialMass"
+                        placeholder="10"
+                        min="0">
+
+                    <label for="height">
+                        HEIGHT (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="5"
+                        min="0">
+
+                    <button onclick="calculatePotentialEnergy()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="potentialResult">
+                    </div>
+
+                </article>
+
+
+                <!-- WORK -->
+
+                <article class="tool-card">
+
+                    <span>03 · ENERGY</span>
+
+                    <h2>WORK</h2>
+
+                    <p>
+                        Calculate mechanical work from
+                        force and displacement.
+                    </p>
+
+                    <div class="formula">
+                        W = F × d
+                    </div>
+
+                    <label for="workForce">
+                        FORCE (N)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="workForce"
+                        placeholder="100"
+                        min="0">
+
+                    <label for="displacement">
+                        DISPLACEMENT (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="displacement"
+                        placeholder="5"
+                        min="0">
+
+                    <button onclick="calculateWork()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="workResult">
+                    </div>
+
+                </article>
+
+
+                <!-- MECHANICAL ENERGY -->
+
+                <article class="tool-card">
+
+                    <span>04 · ENERGY</span>
+
+                    <h2>MECHANICAL</h2>
+
+                    <p>
+                        Calculate total mechanical energy
+                        from kinetic and potential energy.
+                    </p>
+
+                    <div class="formula">
+                        Eₘ = Eₖ + Eₚ
+                    </div>
+
+                    <label for="kineticEnergy">
+                        KINETIC ENERGY (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="kineticEnergy"
+                        placeholder="500"
+                        min="0">
+
+                    <label for="potentialEnergy">
+                        POTENTIAL ENERGY (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="potentialEnergy"
+                        placeholder="1000"
+                        min="0">
+
+                    <button onclick="calculateMechanicalEnergy()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="mechanicalResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             THERMODYNAMICS
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="thermodynamics">
+
+            <div class="category-title">
+
+                <span>03</span>
+
+                <h2>THERMODYNAMICS</h2>
+
+                <p>
+                    Temperature, pressure, gases,
+                    efficiency and thermodynamic systems.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- IDEAL GAS -->
+
+                <article class="tool-card">
+
+                    <span>01 · THERMODYNAMICS</span>
+
+                    <h2>IDEAL GAS</h2>
+
+                    <p>
+                        Calculate pressure using
+                        the ideal gas equation.
+                    </p>
+
+                    <div class="formula">
+                        PV = nRT
+                    </div>
+
+                    <label for="moles">
+                        AMOUNT (mol)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="moles"
+                        placeholder="1"
+                        min="0">
+
+                    <label for="temperature">
+                        TEMPERATURE (K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperature"
+                        placeholder="300"
+                        min="0">
+
+                    <label for="volume">
+                        VOLUME (m³)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="volume"
+                        placeholder="0.025"
+                        min="0">
+
+                    <button onclick="calculateIdealGas()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="idealGasResult">
+                    </div>
+
+                </article>
+
+
+                <!-- THERMAL EFFICIENCY -->
+
+                <article class="tool-card">
+
+                    <span>02 · THERMODYNAMICS</span>
+
+                    <h2>THERMAL</h2>
+
+                    <p>
+                        Calculate thermal efficiency from
+                        useful work and heat input.
+                    </p>
+
+                    <div class="formula">
+                        η = W / Qᵢₙ
+                    </div>
+
+                    <label for="thermalWork">
+                        WORK OUTPUT (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="thermalWork"
+                        placeholder="400"
+                        min="0">
+
+                    <label for="heatInput">
+                        HEAT INPUT (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="heatInput"
+                        placeholder="1000"
+                        min="0">
+
+                    <button onclick="calculateThermalEfficiency()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="thermalResult">
+                    </div>
+
+                </article>
+
+
+                <!-- COP -->
+
+                <article class="tool-card">
+
+                    <span>03 · THERMODYNAMICS</span>
+
+                    <h2>COP</h2>
+
+                    <p>
+                        Calculate coefficient of performance
+                        for refrigeration or heat pump systems.
+                    </p>
+
+                    <div class="formula">
+                        COP = Q / W
+                    </div>
+
+                    <label for="cooling">
+                        COOLING / HEATING (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cooling"
+                        placeholder="3000"
+                        min="0">
+
+                    <label for="copWork">
+                        WORK INPUT (J)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="copWork"
+                        placeholder="1000"
+                        min="0">
+
+                    <button onclick="calculateCOP()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="copResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FLUIDS
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="fluids">
+
+            <div class="category-title">
+
+                <span>04</span>
+
+                <h2>FLUIDS</h2>
+
+                <p>
+                    Pressure, flow, velocity and
+                    dimensionless fluid parameters.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- PRESSURE -->
+
+                <article class="tool-card">
+
+                    <span>01 · FLUIDS</span>
+
+                    <h2>PRESSURE</h2>
+
+                    <p>
+                        Calculate pressure from force
+                        and surface area.
+                    </p>
+
+                    <div class="formula">
+                        P = F / A
+                    </div>
+
+                    <label for="pressureForce">
+                        FORCE (N)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pressureForce"
+                        placeholder="1000"
+                        min="0">
+
+                    <label for="pressureArea">
+                        AREA (m²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pressureArea"
+                        placeholder="0.1"
+                        min="0">
+
+                    <button onclick="calculatePressure()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="pressureResult">
+                    </div>
+
+                </article>
+
+
+                <!-- FLOW RATE -->
+
+                <article class="tool-card">
+
+                    <span>02 · FLUIDS</span>
+
+                    <h2>FLOW RATE</h2>
+
+                    <p>
+                        Calculate volumetric flow rate from
+                        cross-sectional area and velocity.
+                    </p>
+
+                    <div class="formula">
+                        Q = A × v
+                    </div>
+
+                    <label for="flowArea">
+                        AREA (m²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="flowArea"
+                        placeholder="0.01"
+                        min="0">
+
+                    <label for="flowVelocity">
+                        VELOCITY (m/s)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="flowVelocity"
+                        placeholder="2"
+                        min="0">
+
+                    <button onclick="calculateFlowRate()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="flowResult">
+                    </div>
+
+                </article>
+
+
+                <!-- REYNOLDS -->
+
+                <article class="tool-card">
+
+                    <span>03 · FLUIDS</span>
+
+                    <h2>REYNOLDS</h2>
+
+                    <p>
+                        Calculate Reynolds number from density,
+                        velocity, characteristic length and viscosity.
+                    </p>
+
+                    <div class="formula">
+                        Re = ρvL / μ
+                    </div>
+
+                    <label for="density">
+                        DENSITY (kg/m³)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="density"
+                        placeholder="1000"
+                        min="0">
+
+                    <label for="reVelocity">
+                        VELOCITY (m/s)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reVelocity"
+                        placeholder="2"
+                        min="0">
+
+                    <label for="reLength">
+                        LENGTH (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reLength"
+                        placeholder="0.05"
+                        min="0">
+
+                    <label for="viscosity">
+                        DYNAMIC VISCOSITY (Pa·s)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="viscosity"
+                        placeholder="0.001"
+                        min="0">
+
+                    <button onclick="calculateReynolds()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="reynoldsResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MATERIALS
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="materials">
+
+            <div class="category-title">
+
+                <span>05</span>
+
+                <h2>MATERIALS</h2>
+
+                <p>
+                    Density, mass, volume and basic
+                    material-property calculations.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- DENSITY -->
+
+                <article class="tool-card">
+
+                    <span>01 · MATERIALS</span>
+
+                    <h2>DENSITY</h2>
+
+                    <p>
+                        Calculate density from mass
+                        and volume.
+                    </p>
+
+                    <div class="formula">
+                        ρ = m / V
+                    </div>
+
+                    <label for="densityMass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="densityMass"
+                        placeholder="10"
+                        min="0">
+
+                    <label for="densityVolume">
+                        VOLUME (m³)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="densityVolume"
+                        placeholder="0.001"
+                        min="0">
+
+                    <button onclick="calculateDensity()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="densityResult">
+                    </div>
+
+                </article>
+
+
+                <!-- WEIGHT -->
+
+                <article class="tool-card">
+
+                    <span>02 · MATERIALS</span>
+
+                    <h2>WEIGHT</h2>
+
+                    <p>
+                        Calculate gravitational weight
+                        from mass.
+                    </p>
+
+                    <div class="formula">
+                        W = mg
+                    </div>
+
+                    <label for="weightMass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="weightMass"
+                        placeholder="50"
+                        min="0">
+
+                    <label for="weightGravity">
+                        GRAVITY (m/s²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="weightGravity"
+                        placeholder="9.81"
+                        min="0">
+
+                    <button onclick="calculateWeight()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="weightResult">
+                    </div>
+
+                </article>
+
+
+                <!-- EXPANSION -->
+
+                <article class="tool-card">
+
+                    <span>03 · MATERIALS</span>
+
+                    <h2>EXPANSION</h2>
+
+                    <p>
+                        Calculate linear thermal expansion
+                        of a material.
+                    </p>
+
+                    <div class="formula">
+                        ΔL = αL₀ΔT
+                    </div>
+
+                    <label for="expansionLength">
+                        ORIGINAL LENGTH (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="expansionLength"
+                        placeholder="1"
+                        min="0">
+
+                    <label for="alpha">
+                        EXPANSION COEFFICIENT (1/K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="alpha"
+                        placeholder="0.000012"
+                        min="0">
+
+                    <label for="deltaTemperature">
+                        TEMPERATURE CHANGE (K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="deltaTemperature"
+                        placeholder="50"
+                        min="0">
+
+                    <button onclick="calculateExpansion()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="expansionResult">
+                    </div>
+
+                </article>
+
+
+                <!-- YOUNG'S MODULUS -->
+
+                <article class="tool-card">
+
+                    <span>04 · MATERIALS</span>
+
+                    <h2>YOUNG'S</h2>
+
+                    <p>
+                        Calculate Young's modulus from
+                        stress and strain.
+                    </p>
+
+                    <div class="formula">
+                        E = σ / ε
+                    </div>
+
+                    <label for="youngStress">
+                        STRESS (MPa)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="youngStress"
+                        placeholder="200"
+                        min="0">
+
+                    <label for="youngStrain">
+                        STRAIN
+                    </label>
+
+                    <input
+                        type="number"
+                        id="youngStrain"
+                        placeholder="0.001"
+                        min="0">
+
+                    <button onclick="calculateYoungsModulus()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="youngResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             HEAT TRANSFER
+        =================================================== -->
+
+        <section
+            class="tool-category"
+            id="heat-transfer">
+
+            <div class="category-title">
+
+                <span>06</span>
+
+                <h2>HEAT TRANSFER</h2>
+
+                <p>
+                    Conduction, heat flow and basic
+                    thermal engineering calculations.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- CONDUCTION -->
+
+                <article class="tool-card">
+
+                    <span>01 · HEAT TRANSFER</span>
+
+                    <h2>CONDUCTION</h2>
+
+                    <p>
+                        Calculate heat transfer through
+                        a plane wall by conduction.
+                    </p>
+
+                    <div class="formula">
+                        Q̇ = kAΔT / L
+                    </div>
+
+                    <label for="conductivity">
+                        CONDUCTIVITY k (W/m·K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="conductivity"
+                        placeholder="50"
+                        min="0">
+
+                    <label for="heatArea">
+                        AREA (m²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="heatArea"
+                        placeholder="1"
+                        min="0">
+
+                    <label for="temperatureDifference">
+                        TEMPERATURE DIFFERENCE (K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperatureDifference"
+                        placeholder="50"
+                        min="0">
+
+                    <label for="wallThickness">
+                        THICKNESS (m)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="wallThickness"
+                        placeholder="0.1"
+                        min="0">
+
+                    <button onclick="calculateConduction()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="conductionResult">
+                    </div>
+
+                </article>
+
+
+                <!-- HEAT ENERGY -->
+
+                <article class="tool-card">
+
+                    <span>02 · HEAT TRANSFER</span>
+
+                    <h2>HEAT ENERGY</h2>
+
+                    <p>
+                        Calculate sensible heat required
+                        to change the temperature of a substance.
+                    </p>
+
+                    <div class="formula">
+                        Q = mcΔT
+                    </div>
+
+                    <label for="heatMass">
+                        MASS (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="heatMass"
+                        placeholder="10"
+                        min="0">
+
+                    <label for="specificHeat">
+                        SPECIFIC HEAT (J/kg·K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="specificHeat"
+                        placeholder="4186"
+                        min="0">
+
+                    <label for="heatDeltaT">
+                        TEMPERATURE CHANGE (K)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="heatDeltaT"
+                        placeholder="20"
+                        min="0">
+
+                    <button onclick="calculateHeatEnergy()">
+                        CALCULATE
+                    </button>
+
+                    <div
+                        class="result"
+                        id="heatEnergyResult">
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+```
