@@ -714,19 +714,20 @@ input {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 400;
 
-    line-height: 0.9;
+    line-height: 0.95;
 }
 
 .map-node p {
-    max-width: 150px;
+    margin-top: 14px;
 
-    margin-top: 12px;
+    max-width: 190px;
 
-    font-size: 10px;
-    line-height: 1.45;
+    font-size: 11px;
+
+    line-height: 1.5;
 }
 
 
