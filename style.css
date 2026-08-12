@@ -491,23 +491,26 @@ input {
 }
 
 
-/* =========================================================
+/* ==========================================
    ENGINEERING MAP
-========================================================= */
+========================================== */
 
 .engineering-map {
     width: 100%;
-
     padding: 90px 5vw 110px;
 
     background: #f4f4f1;
 
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #000;
 }
+
+
+/* =========================
+   MAP HEADER
+========================= */
 
 .engineering-map-header {
     display: flex;
-
     justify-content: space-between;
     align-items: flex-end;
 
@@ -531,6 +534,496 @@ input {
     letter-spacing: -0.05em;
 }
 
+
+/* =========================
+   MAP CONTAINER
+========================= */
+
+.map-container {
+    position: relative;
+
+    width: 100%;
+    height: 680px;
+
+    background: #ffffff;
+
+    border: 1px solid #000;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TECHNICAL GRID
+========================= */
+
+.map-container::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   OLD AXIS
+========================= */
+
+.map-axis {
+    display: none;
+}
+
+
+/* =========================
+   CONNECTIONS
+========================= */
+
+.map-connection {
+    position: absolute;
+
+    z-index: 2;
+
+    height: 1px;
+
+    background: #000;
+
+    opacity: 0.22;
+
+    transform-origin: left center;
+
+    pointer-events: none;
+}
+
+
+/* TOP LEFT */
+
+.line-mechanics {
+    width: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(213deg);
+}
+
+
+/* TOP CENTER */
+
+.line-materials {
+    width: 210px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(270deg);
+}
+
+
+/* TOP RIGHT */
+
+.line-thermo {
+    width: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(327deg);
+}
+
+
+/* BOTTOM LEFT */
+
+.line-fluids {
+    width: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(147deg);
+}
+
+
+/* BOTTOM CENTER */
+
+.line-energy {
+    width: 210px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(90deg);
+}
+
+
+/* BOTTOM RIGHT */
+
+.line-heat {
+    width: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(33deg);
+}
+
+
+/* =========================
+   NODES
+========================= */
+
+.map-node {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 240px;
+    min-height: 135px;
+
+    padding: 24px;
+
+    background: #fff;
+    color: #000;
+
+    border: 1px solid #000;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================
+   NODE HOVER
+========================= */
+
+.map-node:hover {
+    background: #000;
+    color: #fff;
+
+    transform: translateY(-7px);
+
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.12);
+}
+
+
+/* =========================
+   NODE NUMBER
+========================= */
+
+.map-node span {
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.6;
+}
+
+
+/* =========================
+   NODE TITLE
+========================= */
+
+.map-node h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================
+   NODE DESCRIPTION
+========================= */
+
+.map-node p {
+    margin-top: 14px;
+
+    max-width: 195px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   NODE POSITIONS
+========================= */
+
+
+/* TOP LEFT */
+
+.map-node.mechanics {
+    left: 5%;
+    top: 9%;
+}
+
+
+/* TOP CENTER */
+
+.map-node.materials {
+    left: 50%;
+    top: 4%;
+
+    transform: translateX(-50%);
+}
+
+.map-node.materials:hover {
+    transform: translateX(-50%) translateY(-7px);
+}
+
+
+/* TOP RIGHT */
+
+.map-node.thermo {
+    right: 5%;
+    top: 9%;
+}
+
+
+/* BOTTOM LEFT */
+
+.map-node.fluids {
+    left: 5%;
+    bottom: 9%;
+}
+
+
+/* BOTTOM CENTER */
+
+.map-node.energy {
+    left: 50%;
+    bottom: 4%;
+
+    transform: translateX(-50%);
+}
+
+.map-node.energy:hover {
+    transform: translateX(-50%) translateY(-7px);
+}
+
+
+/* BOTTOM RIGHT */
+
+.map-node.heat {
+    right: 5%;
+    bottom: 9%;
+}
+
+
+/* =========================
+   CENTER ENGINEERING
+========================= */
+
+.map-center {
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 155px;
+    height: 155px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #000;
+    color: #fff;
+
+    border-radius: 50%;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    line-height: 0.95;
+
+    box-shadow:
+        0 0 0 14px #fff,
+        0 0 0 15px #000;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.map-center:hover {
+    transform: translate(-50%, -50%) scale(1.06);
+
+    box-shadow:
+        0 0 0 14px #fff,
+        0 0 0 15px #000;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .engineering-map {
+        padding: 70px 5vw 90px;
+    }
+
+
+    .engineering-map-header {
+        display: block;
+
+        margin-bottom: 35px;
+    }
+
+
+    .engineering-map-header h2 {
+        margin-top: 20px;
+
+        font-size: 18vw;
+    }
+
+
+    .map-container {
+        height: 850px;
+    }
+
+
+    /* Hide technical connections on mobile.
+       Nodes become the visual structure. */
+
+    .map-connection {
+        display: none;
+    }
+
+
+    /* CENTER */
+
+    .map-center {
+        width: 120px;
+        height: 120px;
+
+        font-size: 17px;
+    }
+
+
+    /* NODES */
+
+    .map-node {
+        width: 155px;
+        min-height: 110px;
+
+        padding: 17px;
+    }
+
+
+    .map-node h3 {
+        font-size: 22px;
+    }
+
+
+    .map-node p {
+        max-width: 125px;
+
+        font-size: 9px;
+    }
+
+
+    /* TOP LEFT */
+
+    .map-node.mechanics {
+        left: 4%;
+        top: 6%;
+    }
+
+
+    /* TOP RIGHT */
+
+    .map-node.materials {
+        left: auto;
+        right: 4%;
+        top: 6%;
+
+        transform: none;
+    }
+
+    .map-node.materials:hover {
+        transform: translateY(-6px);
+    }
+
+
+    /* MIDDLE RIGHT */
+
+    .map-node.thermo {
+        right: 4%;
+        top: 30%;
+    }
+
+
+    /* MIDDLE LEFT */
+
+    .map-node.fluids {
+        left: 4%;
+        bottom: 30%;
+    }
+
+
+    /* BOTTOM LEFT */
+
+    .map-node.energy {
+        left: 4%;
+        bottom: 6%;
+
+        transform: none;
+    }
+
+    .map-node.energy:hover {
+        transform: translateY(-6px);
+    }
+
+
+    /* BOTTOM RIGHT */
+
+    .map-node.heat {
+        right: 4%;
+        bottom: 6%;
+    }
+
+}
 
 /* =========================================================
    MAP CONTAINER
