@@ -754,3 +754,88 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// ==========================================
+// CONTENT SYSTEM
+// ==========================================
+
+async function loadDiaryPosts() {
+
+    const container = document.getElementById("diaryPosts");
+
+    if (!container) {
+        return;
+    }
+
+    try {
+
+        const response = await fetch("content/diario/index.json");
+
+        if (!response.ok) {
+            throw new Error("Diary index could not be loaded.");
+        }
+
+        const posts = await response.json();
+
+        container.innerHTML = "";
+
+        posts.forEach(function (post) {
+
+            const article = document.createElement("article");
+
+            article.className = "diary-post";
+
+            article.innerHTML = `
+                <a href="${post.url}" class="diary-post-link">
+
+                    <span class="diary-post-number">
+                        ${post.number || ""}
+                    </span>
+
+                    <div class="diary-post-content">
+
+                        <h2>
+                            ${post.title}
+                        </h2>
+
+                        <p>
+                            ${post.description || ""}
+                        </p>
+
+                    </div>
+
+                    <span class="diary-post-date">
+                        ${post.date || ""}
+                    </span>
+
+                </a>
+            `;
+
+            container.appendChild(article);
+
+        });
+
+    } catch (error) {
+
+        console.error("Diary loading error:", error);
+
+        container.innerHTML = `
+            <p class="content-error">
+                Unable to load diary posts.
+            </p>
+        `;
+
+    }
+
+}
+
+
+// ==========================================
+// CONTENT INITIALIZATION
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    loadDiaryPosts();
+
+});
