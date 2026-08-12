@@ -673,17 +673,15 @@ input {
 
     z-index: 10;
 
-    width: 180px;
-    min-height: 105px;
+    width: 240px;
+    min-height: 135px;
 
-    padding: 20px;
+    padding: 24px;
 
     background: #ffffff;
     color: #000000;
 
     border: 1px solid #000000;
-
-    text-decoration: none;
 
     transition:
         transform 0.25s ease,
@@ -691,7 +689,6 @@ input {
         color 0.25s ease,
         box-shadow 0.25s ease;
 }
-
 .map-node:hover {
     background: #000000;
     color: #ffffff;
