@@ -508,16 +508,21 @@ input {
 /* =========================
    MAP HEADER
 ========================= */
-
 .engineering-map-header {
+    position: relative;
+
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: center;
 
     margin-bottom: 55px;
 }
 
 .engineering-map-header span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
     font-size: 10px;
     letter-spacing: 0.16em;
 }
@@ -532,8 +537,9 @@ input {
 
     line-height: 0.8;
     letter-spacing: -0.05em;
-}
 
+    text-align: center;
+}
 
 /* =========================
    MAP CONTAINER
