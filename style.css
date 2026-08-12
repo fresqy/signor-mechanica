@@ -736,47 +736,38 @@ input {
 ========================================================= */
 
 .map-node.mechanics {
-    left: 7%;
-    top: 12%;
+    left: 5%;
+    top: 10%;
 }
 
 .map-node.materials {
     left: 50%;
-    top: 7%;
+    top: 5%;
 
     transform: translateX(-50%);
 }
 
-.map-node.materials:hover {
-    transform: translateX(-50%) translateY(-6px);
-}
-
 .map-node.thermo {
-    right: 7%;
-    top: 12%;
+    right: 5%;
+    top: 10%;
 }
 
 .map-node.fluids {
-    left: 7%;
-    bottom: 12%;
+    left: 5%;
+    bottom: 10%;
 }
 
 .map-node.energy {
     left: 50%;
-    bottom: 7%;
+    bottom: 5%;
 
     transform: translateX(-50%);
 }
 
-.map-node.energy:hover {
-    transform: translateX(-50%) translateY(-6px);
-}
-
 .map-node.heat {
-    right: 7%;
-    bottom: 12%;
+    right: 5%;
+    bottom: 10%;
 }
-
 
 /* =========================================================
    MAP CENTER
